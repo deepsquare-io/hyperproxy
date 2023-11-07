@@ -1,0 +1,387 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@hyper-cmd/lib-keys':
+    specifier: https://github.com/prdn/hyper-cmd-lib-keys#v0.0.2
+    version: git@github.com+prdn/hyper-cmd-lib-keys/9587b60639954adeaf4200db5c8a673bf4f023c1
+  '@hyper-cmd/lib-net':
+    specifier: https://github.com/prdn/hyper-cmd-lib-net#v0.0.8
+    version: git@github.com+prdn/hyper-cmd-lib-net/709aa5b5bcd18ecd2a4f6b4034de78a5ec5ccdf5
+  '@hyper-cmd/lib-utils':
+    specifier: https://github.com/prdn/hyper-cmd-lib-utils#v0.0.2
+    version: git@github.com+prdn/hyper-cmd-lib-utils/54988d47c371e03b1d6178765225c7f610e588c1
+  hyperdht:
+    specifier: ^6.9.1
+    version: 6.9.1
+  hypertele:
+    specifier: ^1.1.0
+    version: 1.1.0
+  minimist:
+    specifier: ^1.2.8
+    version: 1.2.8
+
+packages:
+
+  /@hyperswarm/secret-stream@6.2.0:
+    resolution: {integrity: sha512-eBoHJaw8KUNR1Zj8HzrlvZ+/RzSFXkZFBBovzgkso93D3DEVHrfP4ddhwbq7HQI8l5YnRYm4Obj+IsdX1PiT5w==}
+    dependencies:
+      b4a: 1.6.4
+      hypercore-crypto: 3.4.0
+      noise-curve-ed: 2.0.1
+      noise-handshake: 3.0.3
+      sodium-secretstream: 1.1.0
+      sodium-universal: 4.0.0
+      streamx: 2.15.2
+      timeout-refresh: 2.0.1
+    dev: false
+
+  /b4a@1.6.4:
+    resolution: {integrity: sha512-fpWrvyVHEKyeEvbKZTVOeZF3VSKKWtJxFIxX/jaVPf+cLbGUSitjb49pHLqPV2BUNNZ0LcoeEGfE/YCpyDYHIw==}
+    dev: false
+
+  /bits-to-bytes@1.3.0:
+    resolution: {integrity: sha512-OJoHTpFXS9bXHBCekGTByf3MqM8CGblBDIduKQeeVVeiU9dDWywSSirXIBYGgg3d1zbVuvnMa1vD4r6PA0kOKg==}
+    dependencies:
+      b4a: 1.6.4
+    dev: false
+
+  /blake2b-wasm@2.4.0:
+    resolution: {integrity: sha512-S1kwmW2ZhZFFFOghcx73+ZajEfKBqhP82JMssxtLVMxlaPea1p9uoLiUZ5WYyHn0KddwbLc+0vh4wR0KBNoT5w==}
+    dependencies:
+      b4a: 1.6.4
+      nanoassert: 2.0.0
+    dev: false
+
+  /blake2b@2.1.4:
+    resolution: {integrity: sha512-AyBuuJNI64gIvwx13qiICz6H6hpmjvYS5DGkG6jbXMOT8Z3WUJ3V1X0FlhIoT1b/5JtHE3ki+xjtMvu1nn+t9A==}
+    dependencies:
+      blake2b-wasm: 2.4.0
+      nanoassert: 2.0.0
+    dev: false
+
+  /blind-relay@1.3.1:
+    resolution: {integrity: sha512-GNOCAQG76WvN8e1k4C8UyQgfpSl8h2NiUgr6aFQJY/WKISvsU1flG0o3TJoUGn5K9uvtbEUtdulgikS1aYKbAQ==}
+    dependencies:
+      b4a: 1.6.4
+      bits-to-bytes: 1.3.0
+      compact-encoding: 2.12.0
+      compact-encoding-bitfield: 1.0.0
+      protomux: 3.5.1
+      sodium-universal: 4.0.0
+      streamx: 2.15.2
+    dev: false
+
+  /bogon@1.1.0:
+    resolution: {integrity: sha512-a6SnToksXHuUlgeMvI/txWmTcKz7c7iBa8f0HbXL4toN1Uza/CTQ4F7n9jSDX49TCpxv3KUP100q4sZfwLyLiw==}
+    dependencies:
+      compact-encoding: 2.12.0
+      compact-encoding-net: 1.2.0
+    dev: false
+
+  /chacha20-universal@1.0.4:
+    resolution: {integrity: sha512-/IOxdWWNa7nRabfe7+oF+jVkGjlr2xUL4J8l/OvzZhj+c9RpMqoo3Dq+5nU1j/BflRV4BKnaQ4+4oH1yBpQG1Q==}
+    dependencies:
+      nanoassert: 2.0.0
+    dev: false
+
+  /compact-encoding-bitfield@1.0.0:
+    resolution: {integrity: sha512-3nMVKUg+PF72UHfainmCL8uKvyWfxsjqOtUY+HiMPGLPCTjnwzoKfFAMo1Ad7nwTPdjBqtGK5b3BOFTFW4EBTg==}
+    dependencies:
+      compact-encoding: 2.12.0
+    dev: false
+
+  /compact-encoding-net@1.2.0:
+    resolution: {integrity: sha512-LVXpNpF7PGQeHRVVLGgYWzuVoYAaDZvKUsUxRioGfkotzvOh4AzoQF1HBH3zMNaSnx7gJXuUr3hkjnijaH/Eng==}
+    dependencies:
+      compact-encoding: 2.12.0
+    dev: false
+
+  /compact-encoding@2.12.0:
+    resolution: {integrity: sha512-8eCZLmyBT4LtC90F/ekIqWos8Y7NaFxY75qa/SlSDVa95NVgMcibQb8z8MTeKb9zctemOJczSXMf5pwMqKjYEQ==}
+    dependencies:
+      b4a: 1.6.4
+    dev: false
+
+  /debugging-stream@2.0.0:
+    resolution: {integrity: sha512-xwfl6wB/3xc553uwtGnSa94jFxnGOc02C0WU2Nmzwr80gzeqn1FX4VcbvoKIhe8L/lPq4BTQttAbrTN94uN8rA==}
+    dependencies:
+      streamx: 2.15.2
+    dev: false
+
+  /dht-rpc@6.9.1:
+    resolution: {integrity: sha512-G09hLUQ03jLcZwn09Kb0i9A7Qb74ZJ+Gh4ui1ul4baQqgxsR9MYkyjpflEr75qtKVULluDAVQG2dGoZk2oTBOA==}
+    dependencies:
+      b4a: 1.6.4
+      compact-encoding: 2.12.0
+      compact-encoding-net: 1.2.0
+      events: 3.3.0
+      fast-fifo: 1.3.2
+      kademlia-routing-table: 1.0.1
+      nat-sampler: 1.0.1
+      sodium-universal: 4.0.0
+      streamx: 2.15.2
+      time-ordered-set: 1.0.2
+      udx-native: 1.7.9
+    dev: false
+
+  /events@3.3.0:
+    resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
+    engines: {node: '>=0.8.x'}
+    dev: false
+
+  /fast-fifo@1.3.2:
+    resolution: {integrity: sha512-/d9sfos4yxzpwkDkuN7k2SqFKtYNmCTzgfEpz82x34IM9/zc8KGxQoXg1liNC/izpRM/MBdt44Nmx41ZWqk+FQ==}
+    dev: false
+
+  /hypercore-crypto@3.4.0:
+    resolution: {integrity: sha512-0cZA1B58p1J84TDbTh8DMMIj7Qr7Rzz8NyGIo+ykUhdwD21gtjiiLWoME92QvN+lgbfu0Zfr9vwxT8sRmyg+AA==}
+    dependencies:
+      b4a: 1.6.4
+      compact-encoding: 2.12.0
+      sodium-universal: 4.0.0
+    dev: false
+
+  /hyperdht@6.9.1:
+    resolution: {integrity: sha512-YChCHoxgsjHvC9+2mbBPAVaVToJqJGi/ZpCMKQCj5eJLeAPn6m+CU4n8R3hTvxh3pHlO6QFv0LIJJQHdX97ukw==}
+    hasBin: true
+    dependencies:
+      '@hyperswarm/secret-stream': 6.2.0
+      b4a: 1.6.4
+      blind-relay: 1.3.1
+      bogon: 1.1.0
+      compact-encoding: 2.12.0
+      compact-encoding-net: 1.2.0
+      debugging-stream: 2.0.0
+      dht-rpc: 6.9.1
+      events: 3.3.0
+      hypercore-crypto: 3.4.0
+      noise-curve-ed: 2.0.1
+      noise-handshake: 3.0.3
+      record-cache: 1.2.0
+      safety-catch: 1.0.2
+      sodium-universal: 4.0.0
+      xache: 1.2.0
+    dev: false
+
+  /hypertele@1.1.0:
+    resolution: {integrity: sha512-5zpiinK3GBwJgaPRNfekr8itpeCVQNhux1MDJP61l4BHRwYODGeBuCi5NPTqoDtuMcLLq89HLZOaYQ6zeDINoQ==}
+    hasBin: true
+    dependencies:
+      '@hyper-cmd/lib-keys': github.com/holepunchto/hyper-cmd-lib-keys/9587b60639954adeaf4200db5c8a673bf4f023c1
+      '@hyper-cmd/lib-net': github.com/holepunchto/hyper-cmd-lib-net/709aa5b5bcd18ecd2a4f6b4034de78a5ec5ccdf5
+      '@hyper-cmd/lib-utils': github.com/holepunchto/hyper-cmd-lib-utils/54988d47c371e03b1d6178765225c7f610e588c1
+      hyperdht: 6.9.1
+      minimist: 1.2.8
+    dev: false
+
+  /kademlia-routing-table@1.0.1:
+    resolution: {integrity: sha512-dKk19sC3/+kWhBIvOKCthxVV+JH0NrswSBq4sA4eOkkPMqQM1rRuOWte1WSKXeP8r9Nx4NuiH2gny3lMddJTpw==}
+    dev: false
+
+  /minimist@1.2.8:
+    resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
+    dev: false
+
+  /nanoassert@2.0.0:
+    resolution: {integrity: sha512-7vO7n28+aYO4J+8w96AzhmU8G+Y/xpPDJz/se19ICsqj/momRbb9mh9ZUtkoJ5X3nTnPdhEJyc0qnM6yAsHBaA==}
+    dev: false
+
+  /napi-macros@2.2.2:
+    resolution: {integrity: sha512-hmEVtAGYzVQpCKdbQea4skABsdXW4RUh5t5mJ2zzqowJS2OyXZTU1KhDVFhx+NlWZ4ap9mqR9TcDO3LTTttd+g==}
+    dev: false
+
+  /nat-sampler@1.0.1:
+    resolution: {integrity: sha512-yQvyNN7xbqR8crTKk3U8gRgpcV1Az+vfCEijiHu9oHHsnIl8n3x+yXNHl42M6L3czGynAVoOT9TqBfS87gDdcw==}
+    dev: false
+
+  /node-gyp-build@4.6.1:
+    resolution: {integrity: sha512-24vnklJmyRS8ViBNI8KbtK/r/DmXQMRiOMXTNz2nrTnAYUwjmEEbnnpB/+kt+yWRv73bPsSPRFddrcIbAxSiMQ==}
+    hasBin: true
+    dev: false
+
+  /noise-curve-ed@2.0.1:
+    resolution: {integrity: sha512-8HMZ40Wmarg8RQjVemLrjB49JSL6eGeOD+tlzaQW5/p+hNPfHFEMC3UZZ57zUqUprMuz6GN+gsPExpz2DWL+iA==}
+    dependencies:
+      b4a: 1.6.4
+      nanoassert: 2.0.0
+      sodium-universal: 4.0.0
+    dev: false
+
+  /noise-handshake@3.0.3:
+    resolution: {integrity: sha512-fRhxQLW7uZmLS059VXA79j8eMxoYPBg7gMGBKqLbuipagTmvUT6xW46DeMsf3Y7LA4fmB9n24s6Vv/a1Q+y8UQ==}
+    dependencies:
+      b4a: 1.6.4
+      nanoassert: 2.0.0
+      sodium-universal: 4.0.0
+    dev: false
+
+  /protomux@3.5.1:
+    resolution: {integrity: sha512-+ioDo9Cu5rTNQH9Or2UkXJRFPAZMzqr4gZFuyib8tTmy8YyZDCL2poP8dhc5JgJydTrj94jn1Dsp/C0ESpEtjQ==}
+    dependencies:
+      b4a: 1.6.4
+      compact-encoding: 2.12.0
+      queue-tick: 1.0.1
+      safety-catch: 1.0.2
+    dev: false
+
+  /queue-tick@1.0.1:
+    resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
+    dev: false
+
+  /record-cache@1.2.0:
+    resolution: {integrity: sha512-kyy3HWCez2WrotaL3O4fTn0rsIdfRKOdQQcEJ9KpvmKmbffKVvwsloX063EgRUlpJIXHiDQFhJcTbZequ2uTZw==}
+    dependencies:
+      b4a: 1.6.4
+    dev: false
+
+  /safety-catch@1.0.2:
+    resolution: {integrity: sha512-C1UYVZ4dtbBxEtvOcpjBaaD27nP8MlvyAQEp2fOTOEe6pfUpk1cDUxij6BR1jZup6rSyUTaBBplK7LanskrULA==}
+    dev: false
+
+  /sha256-universal@1.2.1:
+    resolution: {integrity: sha512-ghn3muhdn1ailCQqqceNxRgkOeZSVfSE13RQWEg6njB+itsFzGVSJv+O//2hvNXZuxVIRyNzrgsZ37SPDdGJJw==}
+    dependencies:
+      b4a: 1.6.4
+      sha256-wasm: 2.2.2
+    dev: false
+
+  /sha256-wasm@2.2.2:
+    resolution: {integrity: sha512-qKSGARvao+JQlFiA+sjJZhJ/61gmW/3aNLblB2rsgIxDlDxsJPHo8a1seXj12oKtuHVgJSJJ7QEGBUYQN741lQ==}
+    dependencies:
+      b4a: 1.6.4
+      nanoassert: 2.0.0
+    dev: false
+
+  /sha512-universal@1.2.1:
+    resolution: {integrity: sha512-kehYuigMoRkIngCv7rhgruLJNNHDnitGTBdkcYbCbooL8Cidj/bS78MDxByIjcc69M915WxcQTgZetZ1JbeQTQ==}
+    dependencies:
+      b4a: 1.6.4
+      sha512-wasm: 2.3.4
+    dev: false
+
+  /sha512-wasm@2.3.4:
+    resolution: {integrity: sha512-akWoxJPGCB3aZCrZ+fm6VIFhJ/p8idBv7AWGFng/CZIrQo51oQNsvDbTSRXWAzIiZJvpy16oIDiCCPqTe21sKg==}
+    dependencies:
+      b4a: 1.6.4
+      nanoassert: 2.0.0
+    dev: false
+
+  /siphash24@1.3.1:
+    resolution: {integrity: sha512-moemC3ZKiTzH29nbFo3Iw8fbemWWod4vNs/WgKbQ54oEs6mE6XVlguxvinYjB+UmaE0PThgyED9fUkWvirT8hA==}
+    dependencies:
+      nanoassert: 2.0.0
+    dev: false
+
+  /sodium-javascript@0.8.0:
+    resolution: {integrity: sha512-rEBzR5mPxPES+UjyMDvKPIXy9ImF17KOJ32nJNi9uIquWpS/nfj+h6m05J5yLJaGXjgM72LmQoUbWZVxh/rmGg==}
+    dependencies:
+      blake2b: 2.1.4
+      chacha20-universal: 1.0.4
+      nanoassert: 2.0.0
+      sha256-universal: 1.2.1
+      sha512-universal: 1.2.1
+      siphash24: 1.3.1
+      xsalsa20: 1.2.0
+    dev: false
+
+  /sodium-native@4.0.4:
+    resolution: {integrity: sha512-faqOKw4WQKK7r/ybn6Lqo1F9+L5T6NlBJJYvpxbZPetpWylUVqz449mvlwIBKBqxEHbWakWuOlUt8J3Qpc4sWw==}
+    requiresBuild: true
+    dependencies:
+      node-gyp-build: 4.6.1
+    dev: false
+
+  /sodium-secretstream@1.1.0:
+    resolution: {integrity: sha512-Qg7D2xomELDjDCWAmE4izk1aecG/il8pQIGmSWFaKgah/V58BVWG/PuSZF6vseTpcqnetIFGaOWzmPNzyTD50A==}
+    dependencies:
+      b4a: 1.6.4
+      sodium-universal: 4.0.0
+    dev: false
+
+  /sodium-universal@4.0.0:
+    resolution: {integrity: sha512-iKHl8XnBV96k1c75gwwzANFdephw/MDWSjQAjPmBE+du0y3P23Q8uf7AcdcfFsYAMwLg7WVBfSAIBtV/JvRsjA==}
+    dependencies:
+      blake2b: 2.1.4
+      chacha20-universal: 1.0.4
+      nanoassert: 2.0.0
+      sha256-universal: 1.2.1
+      sha512-universal: 1.2.1
+      siphash24: 1.3.1
+      sodium-javascript: 0.8.0
+      sodium-native: 4.0.4
+      xsalsa20: 1.2.0
+    dev: false
+
+  /streamx@2.15.2:
+    resolution: {integrity: sha512-b62pAV/aeMjUoRN2C/9F0n+G8AfcJjNC0zw/ZmOHeFsIe4m4GzjVW9m6VHXVjk536NbdU9JRwKMJRfkc+zUFTg==}
+    dependencies:
+      fast-fifo: 1.3.2
+      queue-tick: 1.0.1
+    dev: false
+
+  /time-ordered-set@1.0.2:
+    resolution: {integrity: sha512-vGO99JkxvgX+u+LtOKQEpYf31Kj3i/GNwVstfnh4dyINakMgeZCpew1e3Aj+06hEslhtHEd52g7m5IV+o1K8Mw==}
+    dev: false
+
+  /timeout-refresh@2.0.1:
+    resolution: {integrity: sha512-SVqEcMZBsZF9mA78rjzCrYrUs37LMJk3ShZ851ygZYW1cMeIjs9mL57KO6Iv5mmjSQnOe/29/VAfGXo+oRCiVw==}
+    dev: false
+
+  /udx-native@1.7.9:
+    resolution: {integrity: sha512-H0p3cWa/TOmcH6MsaIsA9eCIK1nPr05b7VGL5cnHaqIWtB4xg+NEgw9fAcq81en/DW9C0dmPsAM+xIyHh1Gatg==}
+    requiresBuild: true
+    dependencies:
+      b4a: 1.6.4
+      events: 3.3.0
+      napi-macros: 2.2.2
+      node-gyp-build: 4.6.1
+      streamx: 2.15.2
+    dev: false
+
+  /xache@1.2.0:
+    resolution: {integrity: sha512-AiWCGTrnsh//rrbJt8DLbDkDW8eLp1Ktkq0nTWzpE+FKCY35oeqLjtz+LNb4abMnjfTgL0ZBaSwzhgzan1ocEw==}
+    dev: false
+
+  /xsalsa20@1.2.0:
+    resolution: {integrity: sha512-FIr/DEeoHfj7ftfylnoFt3rAIRoWXpx2AoDfrT2qD2wtp7Dp+COajvs/Icb7uHqRW9m60f5iXZwdsJJO3kvb7w==}
+    dev: false
+
+  git@github.com+prdn/hyper-cmd-lib-keys/9587b60639954adeaf4200db5c8a673bf4f023c1:
+    resolution: {commit: 9587b60639954adeaf4200db5c8a673bf4f023c1, repo: git@github.com:prdn/hyper-cmd-lib-keys.git, type: git}
+    name: hyper-cmd-lib-keys
+    version: 0.0.1
+    dev: false
+
+  git@github.com+prdn/hyper-cmd-lib-net/709aa5b5bcd18ecd2a4f6b4034de78a5ec5ccdf5:
+    resolution: {commit: 709aa5b5bcd18ecd2a4f6b4034de78a5ec5ccdf5, repo: git@github.com:prdn/hyper-cmd-lib-net.git, type: git}
+    name: hyper-cmd-lib-net
+    version: 0.0.1
+    dev: false
+
+  git@github.com+prdn/hyper-cmd-lib-utils/54988d47c371e03b1d6178765225c7f610e588c1:
+    resolution: {commit: 54988d47c371e03b1d6178765225c7f610e588c1, repo: git@github.com:prdn/hyper-cmd-lib-utils.git, type: git}
+    name: hyper-cmd-lib-utils
+    version: 0.0.1
+    dev: false
+
+  github.com/holepunchto/hyper-cmd-lib-keys/9587b60639954adeaf4200db5c8a673bf4f023c1:
+    resolution: {tarball: https://codeload.github.com/holepunchto/hyper-cmd-lib-keys/tar.gz/9587b60639954adeaf4200db5c8a673bf4f023c1}
+    name: hyper-cmd-lib-keys
+    version: 0.0.1
+    dev: false
+
+  github.com/holepunchto/hyper-cmd-lib-net/709aa5b5bcd18ecd2a4f6b4034de78a5ec5ccdf5:
+    resolution: {tarball: https://codeload.github.com/holepunchto/hyper-cmd-lib-net/tar.gz/709aa5b5bcd18ecd2a4f6b4034de78a5ec5ccdf5}
+    name: hyper-cmd-lib-net
+    version: 0.0.1
+    dev: false
+
+  github.com/holepunchto/hyper-cmd-lib-utils/54988d47c371e03b1d6178765225c7f610e588c1:
+    resolution: {tarball: https://codeload.github.com/holepunchto/hyper-cmd-lib-utils/tar.gz/54988d47c371e03b1d6178765225c7f610e588c1}
+    name: hyper-cmd-lib-utils
+    version: 0.0.1
+    dev: false

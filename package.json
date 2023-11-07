@@ -1,0 +1,20 @@
+{
+  "name": "hyperstuff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hyper-cmd/lib-net": "https://github.com/prdn/hyper-cmd-lib-net#v0.0.8",
+    "@hyper-cmd/lib-keys": "https://github.com/prdn/hyper-cmd-lib-keys#v0.0.2",
+    "@hyper-cmd/lib-utils": "https://github.com/prdn/hyper-cmd-lib-utils#v0.0.2",
+    "hyperdht": "^6.9.1",
+    "hypertele": "^1.1.0",
+    "minimist": "^1.2.8"
+  }
+}
