@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-const { spawn } = require('child_process');
 const os = require('os');
 const HyperDHT = require('hyperdht');
 const net = require('net');
@@ -11,7 +10,7 @@ const libKeys = require('@hyper-cmd/lib-keys');
 const connPiper = libNet.connPiper;
 
 const helpMsg =
-  'Usage:\nhyperssh ?-i identity.json ?-s peer_key ?-u username ?-e ssh_command ?--rdp';
+  'Usage:\nhyperssh ?-i identity.json ?-s peer_key ?-u username ? --rdp';
 
 if (argv.help) {
   console.log(helpMsg);
@@ -34,20 +33,6 @@ if (!peer) {
   process.exit(-1);
 }
 
-const sshCommand = argv.e || '';
-
-function sshArgs(username, port) {
-  return [
-    '-o',
-    'StrictHostKeyChecking=no',
-    '-o',
-    'UserKnownHostsFile=/dev/null',
-    '-p',
-    port,
-    username + '@localhost',
-  ].concat(sshCommand);
-}
-
 let keyPair = null;
 if (argv.i) {
   keyPair = libUtils.resolveIdentity([], argv.i);
@@ -59,8 +44,6 @@ if (argv.i) {
 
   keyPair = libKeys.parseKeyPair(keyPair);
 }
-
-const username = argv.u || os.userInfo().username;
 
 const dht = new HyperDHT({
   keyPair,
