@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-const os = require('os');
 const HyperDHT = require('hyperdht');
 const net = require('net');
 const argv = require('minimist')(process.argv.slice(2));
@@ -9,8 +8,7 @@ const libUtils = require('@hyper-cmd/lib-utils');
 const libKeys = require('@hyper-cmd/lib-keys');
 const connPiper = libNet.connPiper;
 
-const helpMsg =
-  'Usage:\nhyperssh ?-i identity.json ?-s peer_key ?-u username ? --rdp';
+const helpMsg = 'Usage:\nhyperproxy -i identity.json -s peer_key';
 
 if (argv.help) {
   console.log(helpMsg);
@@ -63,17 +61,17 @@ const proxy = net.createServer((c) => {
   );
 });
 
-if (argv.rdp) {
-  proxy.listen(3389, function () {
-    console.log(
-      'Client listening on port 3389 (default RDP port)\nOpen your RDP client and connect to localhost'
-    );
-  });
-} else {
-  proxy.listen(0, function () {
-    console.log(proxy.address());
-  });
-}
+proxy.listen(0, function () {
+  console.log(proxy.address());
+
+  // const { port } = proxy.address()
+
+  // spawn('ssh', sshArgs(username, port), {
+  //   stdio: 'inherit'
+  // }).once('exit', function (code) {
+  //   process.exit(code)
+  // })
+});
 
 process.once('SIGINT', () => {
   dht.destroy().then(() => {
